@@ -15,4 +15,57 @@ body {
   min-height: 100vh;
   background: $navy-950;
   color: $white;
+  padding: $s-800 $s-300;
+
+ .container{
+  width: 100%;
+  .info-wrapper{
+    background: $navy-900;
+    border-radius: 20px;
+    overflow: hidden;
+    .personal-info{
+      display: flex;
+      align-items: center;
+      gap: $s-300;
+      background: $purple-600;
+      padding: $s-400;
+      border-radius: 0 0 20px 20px;
+      
+      img{
+        width: 4rem;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border: 2px solid $white;
+        border-radius: 50%;
+      }
+      .name{
+        p{
+          color: $navy-200;
+          margin-bottom: $s-100;
+        }
+      }
+    }
+    .timeframe{
+      display: flex;
+      justify-content: center;
+      gap: $s-700;
+      padding-block: $s-300;
+
+      
+      .timeframe-button{
+        background: none;
+        border: none;
+        color: $purple-500;;
+        &.active{
+          color: $white;
+        }
+      }
+    }
+  }
+ }
 }
+
+ .stats.weekly,
+ .stats.monthly {
+   display: none;
+ }

@@ -16,19 +16,19 @@ function showStats(statsData) {
           <p>${item.title}</p>
           <img src="./images/icon-ellipsis.svg" alt="ellipsis icon">
         </div>
-        <div id="stats-daily class="stats-daily">
+        <div id="stats-daily" class="stats daily">
           <p class="current">${item.timeframes.daily.current}hrs</p>
           <p class="previous">
             Yesterday - ${item.timeframes.daily.previous}hrs
           </p>
         </div>
-        <div id="stats-weekly class="stats-weekly">
+        <div id="stats-weekly" class="stats weekly">
           <p class="current">${item.timeframes.weekly.current}hrs</p>
           <p class="previous">
             Last Week - ${item.timeframes.weekly.previous}hrs
           </p>
         </div>
-        <div id="stats-monthly class="stats-monthly">
+        <div id="stats-monthly" class="stats monthly">
           <p class="current">${item.timeframes.monthly.current}hrs</p>
           <p class="previous">
             Last Month - ${item.timeframes.monthly.previous}hrs
@@ -53,7 +53,7 @@ fetch(url, {
         }
     })
     .then(data => {
-      console.log(data)
+    // Set initial stats to daily
       showStats(data);
     }
   )

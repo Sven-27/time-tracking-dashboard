@@ -61,6 +61,53 @@ body {
   min-height: 100vh;
   background: hsl(226, 43%, 10%);
   color: hsl(0, 0%, 100%);
+  padding: 4rem 1.5rem;
+}
+body .container {
+  width: 100%;
+}
+body .container .info-wrapper {
+  background: hsl(235, 46%, 20%);
+  border-radius: 20px;
+  overflow: hidden;
+}
+body .container .info-wrapper .personal-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: hsl(246, 80%, 60%);
+  padding: 2rem;
+  border-radius: 0 0 20px 20px;
+}
+body .container .info-wrapper .personal-info img {
+  width: 4rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+body .container .info-wrapper .personal-info .name p {
+  color: hsl(236, 100%, 87%);
+  margin-bottom: 0.5rem;
+}
+body .container .info-wrapper .timeframe {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+  padding-block: 1.5rem;
+}
+body .container .info-wrapper .timeframe .timeframe-button {
+  background: none;
+  border: none;
+  color: hsl(235, 45%, 61%);
+}
+body .container .info-wrapper .timeframe .timeframe-button.active {
+  color: hsl(0, 0%, 100%);
+}
+
+.stats.weekly,
+.stats.monthly {
+  display: none;
 }
 
 /*# sourceMappingURL=output.css.map */
