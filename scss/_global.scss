@@ -15,14 +15,19 @@ body {
   min-height: 100vh;
   background: $navy-950;
   color: $white;
-  padding: $s-800 $s-300;
+  padding-block: $s-800;
 
  .container{
-  width: 100%;
+   @media only screen and (width <= 600px){
+    width: 100%;
+    max-width: 327px;
+   }
   .info-wrapper{
+    width: 100%;
     background: $navy-900;
     border-radius: 20px;
     overflow: hidden;
+    margin-bottom: $s-400;
     .personal-info{
       display: flex;
       align-items: center;
@@ -58,6 +63,31 @@ body {
         color: $purple-500;;
         &.active{
           color: $white;
+        }
+      }
+    }
+  }
+  main{
+    display: grid;
+
+    gap: $s-400;
+    .stats-container{
+      .stats-header{
+
+      }
+      .stats-content{
+        .stats-title{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .stats{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .previous{
+            color: $navy-200;
+          }
         }
       }
     }

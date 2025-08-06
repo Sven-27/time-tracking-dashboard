@@ -6,38 +6,38 @@ const stats = document.querySelector('.stats-wrapper');
 const url = "./data.json";
 
 function showStats(statsData) {
-  stats.innerHTML = statsData.map(item => `
+  stats.innerHTML = statsData.map(item => {
+    return `
     <div class="stats-container">
       <div class="stats-header" style="background-color: ${item.color}">
         <img src="${item.icon}" alt="icon of topic">
       </div>
       <div class="stats-content">
         <div class="stats-title">
-          <p>${item.title}</p>
+          <p class="text-preset-5-medium">${item.title}</p>
           <img src="./images/icon-ellipsis.svg" alt="ellipsis icon">
         </div>
         <div id="stats-daily" class="stats daily">
-          <p class="current">${item.timeframes.daily.current}hrs</p>
-          <p class="previous">
+          <p class="current text-preset-3">${item.timeframes.daily.current}hrs</p>
+          <p class="previous text-preset-6">
             Yesterday - ${item.timeframes.daily.previous}hrs
           </p>
         </div>
         <div id="stats-weekly" class="stats weekly">
-          <p class="current">${item.timeframes.weekly.current}hrs</p>
-          <p class="previous">
+          <p class="current text-preset-3">${item.timeframes.weekly.current}hrs</p>
+          <p class="previous text-preset-6">
             Last Week - ${item.timeframes.weekly.previous}hrs
           </p>
         </div>
         <div id="stats-monthly" class="stats monthly">
-          <p class="current">${item.timeframes.monthly.current}hrs</p>
-          <p class="previous">
+          <p class="current text-preset-3">${item.timeframes.monthly.current}hrs</p>
+          <p class="previous text-preset-6">
             Last Month - ${item.timeframes.monthly.previous}hrs
           </p>
         </div>
       </div>       
-    </div>
-  `
-  )
+    </div>`
+  }).join('');
 }
 
 fetch(url, { 

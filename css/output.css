@@ -61,15 +61,20 @@ body {
   min-height: 100vh;
   background: hsl(226, 43%, 10%);
   color: hsl(0, 0%, 100%);
-  padding: 4rem 1.5rem;
+  padding-block: 4rem;
 }
-body .container {
-  width: 100%;
+@media only screen and (width <= 600px) {
+  body .container {
+    width: 100%;
+    max-width: 327px;
+  }
 }
 body .container .info-wrapper {
+  width: 100%;
   background: hsl(235, 46%, 20%);
   border-radius: 20px;
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 body .container .info-wrapper .personal-info {
   display: flex;
@@ -103,6 +108,23 @@ body .container .info-wrapper .timeframe .timeframe-button {
 }
 body .container .info-wrapper .timeframe .timeframe-button.active {
   color: hsl(0, 0%, 100%);
+}
+body .container main {
+  display: grid;
+  gap: 2rem;
+}
+body .container main .stats-container .stats-content .stats-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .container main .stats-container .stats-content .stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .container main .stats-container .stats-content .stats .previous {
+  color: hsl(236, 100%, 87%);
 }
 
 .stats.weekly,
