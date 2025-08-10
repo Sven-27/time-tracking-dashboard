@@ -69,13 +69,29 @@ body {
   }
   main{
     display: grid;
-
     gap: $s-400;
     .stats-container{
+      border-radius: 20px;
+      // overflow: hidden;
+      position: relative;
       .stats-header{
+        display: flex;
+        justify-content: flex-end;
+        // overflow: hidden;
+        position: relative;
+        z-index: 0;
 
+          img {
+              margin-top: -10px !important;
+            }
       }
       .stats-content{
+        background: $navy-900;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        // min-height: 100px;        
         .stats-title{
           display: flex;
           align-items: center;
@@ -97,5 +113,5 @@ body {
 
  .stats.weekly,
  .stats.monthly {
-   display: none;
+   display: none !important;
  }
