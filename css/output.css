@@ -115,23 +115,19 @@ body .container main {
 }
 body .container main .stats-container {
   border-radius: 20px;
-  position: relative;
+  overflow: hidden;
 }
 body .container main .stats-container .stats-header {
   display: flex;
   justify-content: flex-end;
+  overflow: hidden;
   position: relative;
-  z-index: 0;
 }
 body .container main .stats-container .stats-header img {
-  margin-top: -10px !important;
+  margin-bottom: -30px !important;
 }
 body .container main .stats-container .stats-content {
   background: hsl(235, 46%, 20%);
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 100%;
 }
 body .container main .stats-container .stats-content .stats-title {
   display: flex;
