@@ -73,18 +73,95 @@ body {
     .stats-container{
       border-radius: 20px;
       overflow: hidden;
+      height: clamp(160px, 27vw, 244px);
+      position: relative;
       .stats-header{
         display: flex;
         justify-content: flex-end;
+        padding-right: $s-300;
+        // height: 100%;
         overflow: hidden;
-        position: relative;
+        // z-index: -1;
 
-          img {
-              margin-bottom: -30px !important;
+        img {
+          // margin-bottom: -30px !important;
+
+          &.icon1{
+            margin-top: -15px;
+            width: 78px;
+
+            @media only screen and (width >= 768px){
+              width: 57.48px;
             }
+            @media only screen and (width >= 1200px) {
+              width: 78px;
+            }
+          }
+          &.icon2 {
+            margin-top: -5px;
+            width: 90px;
+
+            @media only screen and (width >=768px) {
+              width: 66.33px;
+            }
+
+            @media only screen and (width >=1200px) {
+              width: 90px;
+            }
+          }
+          &.icon3 {
+            margin-top: -5px;
+            width: 78px;
+
+            @media only screen and (width >=768px) {
+              width: 57.48px;
+            }
+
+            @media only screen and (width >=1200px) {
+              width: 78px;
+            }
+          }
+          &.icon4 {
+            width: 79.65px;
+
+            @media only screen and (width >=768px) {
+              width: 58.7px;
+            }
+
+            @media only screen and (width >=1200px) {
+              width: 79.65px;
+            }
+          }
+          &.icon5 {
+            width: 73.6px;
+
+            @media only screen and (width >=768px) {
+              width: 54.24px;
+            }
+
+            @media only screen and (width >=1200px) {
+              width: 73.6px;
+            }
+          }
+          &.icon6 {
+            width: 72px;
+
+            @media only screen and (width >=768px) {
+              width: 53.06px;
+            }
+
+            @media only screen and (width >=1200px) {
+              width: 72px;
+            }
+          }
+        }
       }
       .stats-content{
+        // display: flex;
+        position: absolute;
         background: $navy-900;
+        border-radius: 20px 20px 0 0;
+        // z-index: 1;
      
         .stats-title{
           display: flex;

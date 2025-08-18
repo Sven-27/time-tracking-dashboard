@@ -7,11 +7,11 @@ const url = "./data.json";
 
 function showStats(statsData) {
   stats.innerHTML = statsData.map((item, i) => {
-    // console.log(`icon${i}`)
+    // console.log(`icon${i + 1}`)
     return `
     <div class="stats-container">
       <div class="stats-header" style="background-color: ${item.color}">
-        <img class="icon${i}" src="${item.icon}" alt="icon of topic">
+        <img class="icon${i + 1}" src="${item.icon}" alt="icon of topic">
       </div>
       <div class="stats-content">
         <div class="stats-title">
