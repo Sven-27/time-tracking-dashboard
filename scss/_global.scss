@@ -84,73 +84,77 @@ body {
         padding-right: $s-300;
         img {
 
+          width: 90px;
+          // margin-top: -10px;
           &.icon1{
-            margin-top: -15px;
-            width: 78px;
+            margin-top: -12px;
+            // width: 78px;
 
-            @media only screen and (width >= 768px){
-              width: 57.48px;
-            }
-            @media only screen and (width >= 1200px) {
-              width: 78px;
-            }
+            // @media only screen and (width >= 768px){
+            //   width: 57.48px;
+            // }
+            // @media only screen and (width >= 1200px) {
+            //   width: 78px;
+            // }
           }
           &.icon2 {
             margin-top: -5px;
-            width: 90px;
+            // width: 90px;
 
-            @media only screen and (width >=768px) {
-              width: 66.33px;
-            }
+            // @media only screen and (width >=768px) {
+            //   width: 66.33px;
+            // }
 
-            @media only screen and (width >=1200px) {
-              width: 90px;
-            }
+            // @media only screen and (width >=1200px) {
+            //   width: 90px;
+            // }
           }
           &.icon3 {
             margin-top: -5px;
-            width: 78px;
+            // width: 78px;
 
-            @media only screen and (width >=768px) {
-              width: 57.48px;
-            }
+            // @media only screen and (width >=768px) {
+            //   width: 57.48px;
+            // }
 
-            @media only screen and (width >=1200px) {
-              width: 78px;
-            }
+            // @media only screen and (width >=1200px) {
+            //   width: 78px;
+            // }
           }
-          &.icon4 {
-            width: 79.65px;
+          // &.icon4 {
+          //   width: 79.65px;
 
-            @media only screen and (width >=768px) {
-              width: 58.7px;
-            }
+          //   @media only screen and (width >=768px) {
+          //     width: 58.7px;
+          //   }
 
-            @media only screen and (width >=1200px) {
-              width: 79.65px;
-            }
-          }
+          //   @media only screen and (width >=1200px) {
+          //     width: 79.65px;
+          //   }
+          // }
           &.icon5 {
-            width: 73.6px;
+            // width: 73.6px;
+            margin-top: -18px;
 
-            @media only screen and (width >=768px) {
-              width: 54.24px;
-            }
+            // @media only screen and (width >=768px) {
+            //   width: 54.24px;
+            // }
 
-            @media only screen and (width >=1200px) {
-              width: 73.6px;
-            }
+            // @media only screen and (width >=1200px) {
+            //   width: 73.6px;
+            // }
           }
           &.icon6 {
-            width: 72px;
+            margin-top: -15px;
+            width: 80px;
 
-            @media only screen and (width >=768px) {
-              width: 53.06px;
-            }
+            // @media only screen and (width >=768px) {
+            //   width: 53.06px;
+            // }
 
-            @media only screen and (width >=1200px) {
-              width: 72px;
-            }
+            // @media only screen and (width >=1200px) {
+            //   width: 72px;
+            // }
           }
         }
       }
