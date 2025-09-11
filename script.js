@@ -9,11 +9,11 @@ function showStats(statsData) {
   stats.innerHTML = statsData.map((item, i) => {
     // console.log(`icon${i + 1}`)
     return `
-    <div class="stats-container">
-      <div class="stats-header" style="background-color: ${item.color}">
+    <div class="stats-container" >
+      <div class="img-container" style="background-color: ${item.color}">
         <img class="icon${i + 1}" src="${item.icon}" alt="icon of topic">
       </div>
-      <div class="stats-content">
+      <div class="stats-content content${i + 1}">
         <div class="stats-title">
           <p class="text-preset-5-medium">${item.title}</p>
           <img src="./images/icon-ellipsis.svg" alt="ellipsis icon">

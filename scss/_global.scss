@@ -72,19 +72,17 @@ body {
     gap: $s-400;
     .stats-container{
       border-radius: 20px;
-      overflow: hidden;
       height: clamp(160px, 27vw, 244px);
       position: relative;
-      .stats-header{
+      overflow: hidden;
+
+      .img-container{
+        min-width: 100%;
+        height: fit-content;
         display: flex;
         justify-content: flex-end;
         padding-right: $s-300;
-        // height: 100%;
-        overflow: hidden;
-        // z-index: -1;
-
         img {
-          // margin-bottom: -30px !important;
 
           &.icon1{
             margin-top: -15px;
@@ -157,16 +155,19 @@ body {
         }
       }
       .stats-content{
-        // display: flex;
         position: absolute;
+        bottom: 0;
+        left: 0;
+        min-width: 100%;
         background: $navy-900;
         border-radius: 20px 20px 0 0;
-        // z-index: 1;
+        padding: $s-300;
      
         .stats-title{
           display: flex;
           align-items: center;
           justify-content: space-between;
+          margin-bottom: $s-100;
         }
         .stats{
           display: flex;

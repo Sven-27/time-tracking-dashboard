@@ -115,106 +115,112 @@ body .container main {
 }
 body .container main .stats-container {
   border-radius: 20px;
-  overflow: hidden;
   height: clamp(160px, 27vw, 244px);
   position: relative;
+  overflow: hidden;
 }
-body .container main .stats-container .stats-header {
+body .container main .stats-container .img-container {
+  min-width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: flex-end;
   padding-right: 1.5rem;
-  overflow: hidden;
 }
-body .container main .stats-container .stats-header img.icon1 {
+body .container main .stats-container .img-container img.icon1 {
   margin-top: -15px;
   width: 78px;
 }
 @media only screen and (width >= 768px) {
-  body .container main .stats-container .stats-header img.icon1 {
+  body .container main .stats-container .img-container img.icon1 {
     width: 57.48px;
   }
 }
 @media only screen and (width >= 1200px) {
-  body .container main .stats-container .stats-header img.icon1 {
+  body .container main .stats-container .img-container img.icon1 {
     width: 78px;
   }
 }
-body .container main .stats-container .stats-header img.icon2 {
+body .container main .stats-container .img-container img.icon2 {
   margin-top: -5px;
   width: 90px;
 }
 @media only screen and (width >= 768px) {
-  body .container main .stats-container .stats-header img.icon2 {
+  body .container main .stats-container .img-container img.icon2 {
     width: 66.33px;
   }
 }
 @media only screen and (width >= 1200px) {
-  body .container main .stats-container .stats-header img.icon2 {
+  body .container main .stats-container .img-container img.icon2 {
     width: 90px;
   }
 }
-body .container main .stats-container .stats-header img.icon3 {
+body .container main .stats-container .img-container img.icon3 {
   margin-top: -5px;
   width: 78px;
 }
 @media only screen and (width >= 768px) {
-  body .container main .stats-container .stats-header img.icon3 {
+  body .container main .stats-container .img-container img.icon3 {
     width: 57.48px;
   }
 }
 @media only screen and (width >= 1200px) {
-  body .container main .stats-container .stats-header img.icon3 {
+  body .container main .stats-container .img-container img.icon3 {
     width: 78px;
   }
 }
-body .container main .stats-container .stats-header img.icon4 {
+body .container main .stats-container .img-container img.icon4 {
   width: 79.65px;
 }
 @media only screen and (width >= 768px) {
-  body .container main .stats-container .stats-header img.icon4 {
+  body .container main .stats-container .img-container img.icon4 {
     width: 58.7px;
   }
 }
 @media only screen and (width >= 1200px) {
-  body .container main .stats-container .stats-header img.icon4 {
+  body .container main .stats-container .img-container img.icon4 {
     width: 79.65px;
   }
 }
-body .container main .stats-container .stats-header img.icon5 {
+body .container main .stats-container .img-container img.icon5 {
   width: 73.6px;
 }
 @media only screen and (width >= 768px) {
-  body .container main .stats-container .stats-header img.icon5 {
+  body .container main .stats-container .img-container img.icon5 {
     width: 54.24px;
   }
 }
 @media only screen and (width >= 1200px) {
-  body .container main .stats-container .stats-header img.icon5 {
+  body .container main .stats-container .img-container img.icon5 {
     width: 73.6px;
   }
 }
-body .container main .stats-container .stats-header img.icon6 {
+body .container main .stats-container .img-container img.icon6 {
   width: 72px;
 }
 @media only screen and (width >= 768px) {
-  body .container main .stats-container .stats-header img.icon6 {
+  body .container main .stats-container .img-container img.icon6 {
     width: 53.06px;
   }
 }
 @media only screen and (width >= 1200px) {
-  body .container main .stats-container .stats-header img.icon6 {
+  body .container main .stats-container .img-container img.icon6 {
     width: 72px;
   }
 }
 body .container main .stats-container .stats-content {
   position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
   background: hsl(235, 46%, 20%);
   border-radius: 20px 20px 0 0;
+  padding: 1.5rem;
 }
 body .container main .stats-container .stats-content .stats-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 body .container main .stats-container .stats-content .stats {
   display: flex;
