@@ -19,19 +19,19 @@ function showStats(statsData) {
           <img src="./images/icon-ellipsis.svg" alt="ellipsis icon">
         </div>
         <div id="stats-daily" class="stats daily">
-          <p class="current text-preset-3">${item.timeframes.daily.current}hrs</p>
+          <p class="current text-preset-1">${item.timeframes.daily.current}hrs</p>
           <p class="previous text-preset-6">
             Yesterday - ${item.timeframes.daily.previous}hrs
           </p>
         </div>
         <div id="stats-weekly" class="stats weekly">
-          <p class="current text-preset-3">${item.timeframes.weekly.current}hrs</p>
+          <p class="current text-preset-1">${item.timeframes.weekly.current}hrs</p>
           <p class="previous text-preset-6">
             Last Week - ${item.timeframes.weekly.previous}hrs
           </p>
         </div>
         <div id="stats-monthly" class="stats monthly">
-          <p class="current text-preset-3">${item.timeframes.monthly.current}hrs</p>
+          <p class="current text-preset-1">${item.timeframes.monthly.current}hrs</p>
           <p class="previous text-preset-6">
             Last Month - ${item.timeframes.monthly.previous}hrs
           </p>

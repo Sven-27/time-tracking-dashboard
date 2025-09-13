@@ -1,7 +1,7 @@
 // font styles
 
 .text-preset-1{
-  font-size: $fs-56;
+  font-size: clamp($fs-32, 8vw, $fs-56);
   font-weight: $fw-300;
   line-height: $lh-66;
   letter-spacing: $s-0;

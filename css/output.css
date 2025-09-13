@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 .text-preset-1 {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 8vw, 3.5rem);
   font-weight: 300;
   line-height: 4.125rem;
   letter-spacing: 0px;
@@ -63,10 +63,18 @@ body {
   color: hsl(0, 0%, 100%);
   padding-block: 4rem;
 }
-@media only screen and (width <= 600px) {
+body .container {
+  width: 100%;
+  max-width: 327px;
+}
+@media only screen and (width >= 768px) {
   body .container {
-    width: 100%;
-    max-width: 327px;
+    max-width: 612px;
+  }
+}
+@media only screen and (width >= 1200px) {
+  body .container {
+    max-width: 1116px;
   }
 }
 body .container .info-wrapper {
@@ -113,11 +121,27 @@ body .container main {
   display: grid;
   gap: 2rem;
 }
+@media only screen and (width >= 768px) {
+  body .container main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
 body .container main .stats-container {
   border-radius: 20px;
-  height: clamp(160px, 27vw, 244px);
+  height: 180px;
   position: relative;
   overflow: hidden;
+}
+@media only screen and (width >= 768px) {
+  body .container main .stats-container {
+    height: 200px;
+  }
+}
+@media only screen and (width >= 1200px) {
+  body .container main .stats-container {
+    height: 244px;
+  }
 }
 body .container main .stats-container .img-container {
   min-width: 100%;
@@ -127,7 +151,12 @@ body .container main .stats-container .img-container {
   padding-right: 1.5rem;
 }
 body .container main .stats-container .img-container img {
-  width: 90px;
+  width: 75px;
+}
+@media only screen and (width >= 768px) {
+  body .container main .stats-container .img-container img {
+    width: 70px;
+  }
 }
 body .container main .stats-container .img-container img.icon1 {
   margin-top: -12px;
@@ -143,16 +172,22 @@ body .container main .stats-container .img-container img.icon5 {
 }
 body .container main .stats-container .img-container img.icon6 {
   margin-top: -15px;
-  width: 80px;
+  width: 65px;
 }
 body .container main .stats-container .stats-content {
   position: absolute;
   bottom: 0;
   left: 0;
   min-width: 100%;
+  height: 145px;
   background: hsl(235, 46%, 20%);
   border-radius: 20px 20px 0 0;
   padding: 1.5rem;
+}
+@media only screen and (width >= 768px) {
+  body .container main .stats-container .stats-content {
+    height: 160px;
+  }
 }
 body .container main .stats-container .stats-content .stats-title {
   display: flex;
@@ -164,6 +199,13 @@ body .container main .stats-container .stats-content .stats {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (width >= 768px) {
+  body .container main .stats-container .stats-content .stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }
 body .container main .stats-container .stats-content .stats .previous {
   color: hsl(236, 100%, 87%);
