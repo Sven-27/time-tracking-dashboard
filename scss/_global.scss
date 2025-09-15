@@ -27,6 +27,8 @@ body {
   @media only screen and (width >= 1200px) {
     // width: 100%;
     max-width: 1116px;
+    gap: $s-400;
+    display: flex;
   }
   .info-wrapper{
     width: 100%;
@@ -34,6 +36,11 @@ body {
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: $s-400;
+
+    @media only screen and (width >= 1200px){
+      width: 255px;
+      margin-bottom: unset;
+    }
     .personal-info{
       display: flex;
       align-items: center;
@@ -41,6 +48,13 @@ body {
       background: $purple-600;
       padding: $s-400;
       border-radius: 0 0 20px 20px;
+
+      @media only screen and (width >=1200px) {
+         display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          height: 354px;
+        }
       
       img{
         width: 4rem;
@@ -53,6 +67,20 @@ body {
         p{
           color: $navy-200;
           margin-bottom: $s-100;
+
+          @media only screen and (width >=1200px) {
+            margin-top: $s-200;
+            margin-bottom: unset;
+          }
+        }
+
+        h2{
+
+          @media only screen and (width >= 1200px){
+            span{
+              display: block;
+            }
+          }
         }
       }
     }
@@ -61,6 +89,14 @@ body {
       justify-content: center;
       gap: $s-700;
       padding-block: $s-300;
+
+      @media only screen and (width >=1200px) {
+         flex-direction: column;
+         gap: $s-200;
+         align-items: flex-start;
+         justify-content: center;
+         padding-left: $s-400;
+        }
 
       
       .timeframe-button{
@@ -88,7 +124,7 @@ body {
       overflow: hidden;
 
     @media only screen and (width >= 768px) {
-        height: 200px
+        height: 220px
       }
 
       @media only screen and (width >=1200px) {
@@ -97,13 +133,16 @@ body {
 
       .img-container{
         min-width: 100%;
-        height: fit-content;
+        height: 100px;
         display: flex;
         justify-content: flex-end;
+        align-items: flex-start;
         padding-right: $s-300;
         img {
 
           width: 75px;
+          height: auto;
+          object-fit: contain;
 
           @media only screen and (width >=768px) {
               width: 70px;
@@ -192,7 +231,7 @@ body {
         padding: $s-300;
 
         @media only screen and (width >=768px) {
-            height: 160px;
+            height: 180px;
           }
      
         .stats-title{
