@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: .2s ease-in-out;
 }
 
 // body styles
@@ -151,76 +152,21 @@ body {
           @media only screen and (width >=768px) {
               width: 70px;
             }
-          // margin-top: -10px;
           &.icon1{
             margin-top: -12px;
-            // width: 78px;
-
-            // @media only screen and (width >= 768px){
-            //   width: 57.48px;
-            // }
-            // @media only screen and (width >= 1200px) {
-            //   width: 78px;
-            // }
           }
           &.icon2 {
             margin-top: -5px;
-            // width: 90px;
-
-            // @media only screen and (width >=768px) {
-            //   width: 66.33px;
-            // }
-
-            // @media only screen and (width >=1200px) {
-            //   width: 90px;
-            // }
           }
           &.icon3 {
             margin-top: -5px;
-            // width: 78px;
-
-            // @media only screen and (width >=768px) {
-            //   width: 57.48px;
-            // }
-
-            // @media only screen and (width >=1200px) {
-            //   width: 78px;
-            // }
           }
-          // &.icon4 {
-          //   width: 79.65px;
-
-          //   @media only screen and (width >=768px) {
-          //     width: 58.7px;
-          //   }
-
-          //   @media only screen and (width >=1200px) {
-          //     width: 79.65px;
-          //   }
-          // }
           &.icon5 {
-            // width: 73.6px;
             margin-top: -18px;
-
-            // @media only screen and (width >=768px) {
-            //   width: 54.24px;
-            // }
-
-            // @media only screen and (width >=1200px) {
-            //   width: 73.6px;
-            // }
           }
           &.icon6 {
             margin-top: -15px;
             width: 65px;
-
-            // @media only screen and (width >=768px) {
-            //   width: 53.06px;
-            // }
-
-            // @media only screen and (width >=1200px) {
-            //   width: 72px;
-            // }
           }
         }
       }
@@ -233,6 +179,11 @@ body {
         background: $navy-900;
         border-radius: 20px 20px 0 0;
         padding: $s-300;
+
+        &:hover, &:focus, &:active {
+          background: $navy-800;
+
+        }
 
         @media only screen and (width >=768px) {
           height: 180px;
@@ -272,7 +223,10 @@ body {
  }
 }
 
- .stats.weekly,
- .stats.monthly {
-   display: none !important;
- }
+.show{
+  display: block !important;
+}
+
+.hide{
+  display: none !important;
+}
