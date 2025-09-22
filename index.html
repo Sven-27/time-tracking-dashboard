@@ -18,10 +18,10 @@
           <h2 class="text-preset-2"><span>Jeremy</span> Robson</h2>
         </div>
       </div>
-      <div class="timeframe">
-        <button id="daily" class="timeframe-button active text-preset-5-regular">Daily</button>
-        <button id="weekly" class="timeframe-button text-preset-5-regular">Weekly</button>
-        <button id="monthly" class="timeframe-button text-preset-5-regular">Monthly</button>
+      <div class="timeframe tabs">
+        <button id="daily" data-tab="stats-daily" class="timeframe-button tablink active text-preset-5-regular" onclick="openStat(event, 'stats-daily')">Daily</button>
+        <button id="weekly" data-tab="stats-weekly" class="timeframe-button tablink text-preset-5-regular" onclick="openStat(event, 'stats-weekly')">Weekly</button>
+        <button id="monthly" data-tab="stats-monthly" class="timeframe-button tablink text-preset-5-regular" onclick="openStat(event, 'stats-monthly')">Monthly</button>
       </div>
     </div>
     <main class="stats-wrapper"></main>

@@ -2,61 +2,41 @@ const timeframe = document.querySelector('.timeframe');
 const daily = document.getElementById('daily');
 const weekly = document.getElementById('weekly');
 const monthly = document.getElementById('monthly');
-const statsDaily = document.getElementById('stats-daily');
-const statsWeekly = document.getElementById('stats-weekly');
-const statsMonthly = document.getElementById('stats-monthly');
+const statsDaily = document.querySelector('#stats-daily')
+const statsWeekly = document.querySelector('#stats-weekly');
+const statsMonthly = document.querySelector('#stats-monthly');
 const statsWrapper = document.querySelector('.stats-wrapper');
 const stats = document.querySelectorAll('.stats');
 const url = "./data.json";
+const tabButtons = document.querySelectorAll(".tablink");
+const tabContents = document.querySelectorAll(".tabcontent");
 
-timeframe.addEventListener('click', (e) => {
-  const target = e.target;
-  if (target.id === 'daily') {
-    daily.classList.add('active');
-    weekly.classList.remove('active');
-    monthly.classList.remove('active');
-    stats.forEach(stat => {
-      if (stat.classList.contains('stats-daily')) {
-        stat.classList.remove('hide');
-        stat.classList.add('show');
-      } else {
-        stat.classList.remove('show');
-        stat.classList.add('hide');
-      }
-    });
-  } else if (target.id === 'weekly') {
-    daily.classList.remove('active');
-    weekly.classList.add('active');
-    monthly.classList.remove('active');
-    stats.forEach(stat => {
-      if (stat.classList.contains('stats-weekly')) {
-        stat.classList.remove('hide');
-        stat.classList.add('show');
-      }
-      else {
-        stat.classList.remove('show');
-        stat.classList.add('hide');
-      }
-    });
-  } else if (target.id === 'monthly') {
-    daily.classList.remove('active');
-    weekly.classList.remove('active');
-    monthly.classList.add('active');
-    stats.forEach(stat => {
-      if (stat.classList.contains('stats-monthly')) {
-        stat.classList.remove('hide');
-        stat.classList.add('show');
-      } else {
-        stat.classList.remove('show');
-        stat.classList.add('hide');
-      }
-    });
+function openStat(evt, statName) {
+   // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    if(tabcontent[i].id === statName){
+      tabcontent[i].style.display= "block";
+    }
+     else{
+      tabcontent[i].style.display = "none";
+    }
   }
-});
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  evt.currentTarget.className += " active";
+}
+
 
 function showStats(statsData) {
   statsWrapper.innerHTML = statsData.map((item, i) => {
-    // console.log(`icon${i + 1}`)
     return `
     <div class="stats-container" >
       <div class="img-container" style="background-color: ${item.color}">
@@ -67,19 +47,19 @@ function showStats(statsData) {
           <p class="text-preset-5-medium">${item.title}</p>
           <img src="./images/icon-ellipsis.svg" alt="ellipsis icon">
         </div>
-        <div id="stats-daily" class="stats stats-daily show">
+        <div id="stats-daily" class="tabcontent stats stats-daily active">
           <p class="current text-preset-1">${item.timeframes.daily.current}hrs</p>
           <p class="previous text-preset-6">
             Yesterday - ${item.timeframes.daily.previous}hrs
           </p>
         </div>
-        <div id="stats-weekly" class="stats stats-weekly hide">
+        <div id="stats-weekly" class="tabcontent stats stats-weekly">
           <p class="current text-preset-1">${item.timeframes.weekly.current}hrs</p>
           <p class="previous text-preset-6">
             Last Week - ${item.timeframes.weekly.previous}hrs
           </p>
         </div>
-        <div id="stats-monthly" class="stats stats-monthly hide">
+        <div id="stats-monthly" class="tabcontent stats stats-monthly">
           <p class="current text-preset-1">${item.timeframes.monthly.current}hrs</p>
           <p class="previous text-preset-6">
             Last Month - ${item.timeframes.monthly.previous}hrs

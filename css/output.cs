@@ -270,4 +270,12 @@ body .container main .stats-container .stats-content .stats .previous {
   color: hsl(236, 100%, 87%);
 }
 
-/*# sourceMappingURL=output.css.map */
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=output.cs.map */
