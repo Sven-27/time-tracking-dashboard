@@ -1,19 +1,19 @@
-const timeframe = document.querySelector('.timeframe');
-const daily = document.getElementById('daily');
-const weekly = document.getElementById('weekly');
-const monthly = document.getElementById('monthly');
-const statsDaily = document.querySelector('#stats-daily')
-const statsWeekly = document.querySelector('#stats-weekly');
-const statsMonthly = document.querySelector('#stats-monthly');
 const statsWrapper = document.querySelector('.stats-wrapper');
-const stats = document.querySelectorAll('.stats');
 const url = "./data.json";
 const tabButtons = document.querySelectorAll(".tablink");
 const tabContents = document.querySelectorAll(".tabcontent");
 
+// Add event listeners to tab buttons
+tabButtons.forEach(button => {
+  button.addEventListener("click", (e) => {
+    const statName = e.target.getAttribute("data-tab");
+    openStat(e, statName);
+  });
+});
+
 function openStat(evt, statName) {
    // Declare all variables
-  var i, tabcontent, tablinks;
+  let i, tabcontent, tablinks;
 
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");

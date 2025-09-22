@@ -205,10 +205,6 @@ body {
           justify-content: space-between;
           align-items: center;
 
-          // &.active{
-          //   display: block;
-          // }
-
           @media only screen and (width >= 768px){
             flex-direction: column;
             align-items: flex-start;
@@ -226,11 +222,3 @@ body {
   }
  }
 }
-
-// .show {
-//   display: flex;
-// }
-
-// .tabcontent {
-//   display: none;
-// }
