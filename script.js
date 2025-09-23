@@ -47,19 +47,19 @@ function showStats(statsData) {
           <p class="text-preset-5-medium">${item.title}</p>
           <img src="./images/icon-ellipsis.svg" alt="ellipsis icon">
         </div>
-        <div id="daily-content" role="tabpanel" data-content="stats-daily" class="tabcontent stats stats-daily active">
+        <div role="tabpanel" data-content="stats-daily" class="tabcontent stats stats-daily active">
           <p class="current text-preset-1">${item.timeframes.daily.current}hrs</p>
           <p class="previous text-preset-6">
             Yesterday - ${item.timeframes.daily.previous}hrs
           </p>
         </div>
-        <div id="weekly-content" aria-hidden role="tabpanel" data-content="stats-weekly" class="tabcontent stats stats-weekly">
+        <div aria-hidden role="tabpanel" data-content="stats-weekly" class="tabcontent stats stats-weekly">
           <p class="current text-preset-1">${item.timeframes.weekly.current}hrs</p>
           <p class="previous text-preset-6">
             Last Week - ${item.timeframes.weekly.previous}hrs
           </p>
         </div>
-        <div id="monthly-content" aria-hidden role="tabpanel" data-content="stats-monthly" class="tabcontent stats stats-monthly">
+        <div aria-hidden role="tabpanel" data-content="stats-monthly" class="tabcontent stats stats-monthly">
           <p class="current text-preset-1">${item.timeframes.monthly.current}hrs</p>
           <p class="previous text-preset-6">
             Last Month - ${item.timeframes.monthly.previous}hrs
