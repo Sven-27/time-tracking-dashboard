@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="info-wrapper">
+    <section class="info-wrapper">
       <div class="personal-info">
         <img src="./images/image-jeremy.png" alt="Jeremy Robson" class="profile-image">
         <div class="name">
@@ -18,12 +18,36 @@
           <h1 class="text-preset-2"><span>Jeremy</span> Robson</h1>
         </div>
       </div>
-      <div role="tablist" class="timeframe tabs">
-        <button role="tab" aria-selected="true" id="daily" data-tab="stats-daily" class="timeframe-button tablink active text-preset-5-regular">Daily</button>
-        <button role="tab" id="weekly" data-tab="stats-weekly" class="timeframe-button tablink text-preset-5-regular">Weekly</button>
-        <button role="tab" id="monthly" data-tab="stats-monthly" class="timeframe-button tablink text-preset-5-regular">Monthly</button>
+      <div role="tablist" class="timeframe tabs" aria-label="Timeframe Tabs">
+        <button 
+          role="tab" 
+          aria-selected="true" 
+          tabindex="0"
+          id="daily" 
+          data-tab="stats-daily" 
+          class="timeframe-button tablink active text-preset-5-regular">
+          Daily
+        </button>
+        <button 
+          role="tab" 
+          aria-selected="false" 
+          tabindex="1"
+          id="weekly" 
+          data-tab="stats-weekly" 
+          class="timeframe-button tablink text-preset-5-regular">
+          Weekly
+        </button>
+        <button 
+          role="tab" 
+          aria-selected="false" 
+          tabindex="2"
+          id="monthly" 
+          data-tab="stats-monthly" 
+          class="timeframe-button tablink text-preset-5-regular">
+          Monthly
+        </button>
       </div>
-    </div>
+    </section>
     <main class="stats-wrapper"></main>
   </div>
   <script defer src="./script.js"></script>
