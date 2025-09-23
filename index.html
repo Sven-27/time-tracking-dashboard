@@ -18,10 +18,10 @@
           <h1 class="text-preset-2"><span>Jeremy</span> Robson</h1>
         </div>
       </div>
-      <div class="timeframe tabs">
-        <button id="daily" data-tab="stats-daily" class="timeframe-button tablink active text-preset-5-regular">Daily</button>
-        <button id="weekly" data-tab="stats-weekly" class="timeframe-button tablink text-preset-5-regular">Weekly</button>
-        <button id="monthly" data-tab="stats-monthly" class="timeframe-button tablink text-preset-5-regular">Monthly</button>
+      <div role="tablist" class="timeframe tabs">
+        <button role="tab" aria-selected="true" aria-controls="tabpanel" id="daily" data-tab="stats-daily" class="timeframe-button tablink active text-preset-5-regular">Daily</button>
+        <button role="tab" aria-selected="true" aria-controls="tabpanel" id="weekly" data-tab="stats-weekly" class="timeframe-button tablink text-preset-5-regular">Weekly</button>
+        <button role="tab" aria-selected="true" aria-controls="tabpanel" id="monthly" data-tab="stats-monthly" class="timeframe-button tablink text-preset-5-regular">Monthly</button>
       </div>
     </div>
     <main class="stats-wrapper"></main>
