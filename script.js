@@ -18,7 +18,7 @@ function openStat(evt, statName) {
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
-    if(tabcontent[i].id === statName){
+    if(tabcontent[i].getAttribute("data-content") === statName){
       tabcontent[i].style.display= "block";
     }
      else{
@@ -47,19 +47,19 @@ function showStats(statsData) {
           <p class="text-preset-5-medium">${item.title}</p>
           <img src="./images/icon-ellipsis.svg" alt="ellipsis icon">
         </div>
-        <div id="stats-daily" class="tabcontent stats stats-daily active">
+        <div data-content="stats-daily" class="tabcontent stats stats-daily active">
           <p class="current text-preset-1">${item.timeframes.daily.current}hrs</p>
           <p class="previous text-preset-6">
             Yesterday - ${item.timeframes.daily.previous}hrs
           </p>
         </div>
-        <div id="stats-weekly" class="tabcontent stats stats-weekly">
+        <div data-content="stats-weekly" class="tabcontent stats stats-weekly">
           <p class="current text-preset-1">${item.timeframes.weekly.current}hrs</p>
           <p class="previous text-preset-6">
             Last Week - ${item.timeframes.weekly.previous}hrs
           </p>
         </div>
-        <div id="stats-monthly" class="tabcontent stats stats-monthly">
+        <div data-content="stats-monthly" class="tabcontent stats stats-monthly">
           <p class="current text-preset-1">${item.timeframes.monthly.current}hrs</p>
           <p class="previous text-preset-6">
             Last Month - ${item.timeframes.monthly.previous}hrs
